@@ -99,7 +99,7 @@
                 </div>
 
                 <div class="cv-download">
-                    <a href="/" download class="btn-download">
+                    <a href="https://github.com/flaviodlv/portfolio/blob/main/Flavio-De-Oliveira-FlowCV-Resume-20251115.pdf" target="_blank" download class="btn-download">
                         CV complet 
                     </a>
                 </div>
