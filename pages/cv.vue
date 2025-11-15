@@ -99,13 +99,13 @@
                 </div>
 
                 <div class="cv-download">
-                    <a href="/path/to/your/cv.pdf" download class="btn-download">
+                    <a href="/cv.pdf" download class="btn-download">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                             <polyline points="7 10 12 15 17 10"></polyline>
                             <line x1="12" y1="15" x2="12" y2="3"></line>
                         </svg>
-                        Télécharger mon CV complet (PDF)
+                        CV complet (PDF)
                     </a>
                 </div>
             </div>
@@ -254,12 +254,6 @@ definePageMeta({
     border-radius: 12px;
     padding: 24px;
     transition: all 0.3s ease;
-    
-    &:hover {
-        border-color: #58a6ff;
-        transform: translateY(-3px);
-        box-shadow: 0 6px 20px rgba(88, 166, 255, 0.1);
-    }
 }
 
 .highlight-icon {
@@ -311,12 +305,6 @@ definePageMeta({
     font-weight: 500;
     font-size: 1.1rem;
     transition: all 0.3s ease;
-    
-    &:hover {
-        background: #2ea043;
-        transform: translateY(-2px);
-        box-shadow: 0 6px 25px rgba(35, 134, 54, 0.4);
-    }
     
     svg {
         transition: transform 0.3s ease;
