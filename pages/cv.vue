@@ -99,8 +99,8 @@
                 </div>
 
                 <div class="cv-download">
-                    <a href="\Flavio-De-Oliveira-FlowCV-Resume-20251115.pdf" target="_blank" download class="btn-download">
-                        CV complet 
+                    <a href="\Flavio-De-Oliveira-FlowCV-Resume-20251115.pdf" target="_blank">
+                        Lien vers le CV complet
                     </a>
                 </div>
             </div>
@@ -286,6 +286,19 @@ definePageMeta({
     background: rgba(35, 134, 54, 0.05);
     border-top: 1px solid #30363d;
     text-align: center;
+}
+
+.cv-download a {
+    color: #238636;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    
+    &:hover {
+        color: #21e745;
+        
+    }
 }
 
 .btn-download {

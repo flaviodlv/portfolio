@@ -1,8 +1,8 @@
 <template>
     <div class="projects-page">
         <div class="container">
-            <h1 class="page-title">Projets</h1>
-            <p class="page-subtitle">Découvrez mes réalisations</p>
+            <h1 class="page-title">Mes Projets</h1>
+            <p class="page-subtitle">Découvrez mes réalisations et expérimentations</p>
 
             <div class="projects-grid">
                 <div class="project-card">
@@ -17,10 +17,11 @@
                         </span>
                     </div>
                     <p class="project-description">
-                        Un projet minimaliste utilisant Nuxt.js pour tester l'AB-Testing (vu en stage)
+                        Un projet minimaliste utilisant Nuxt.js pour explorer les fonctionnalités du framework.
                     </p>
                     <div class="project-links">
-                        <a target="_blank" href="https://github.com/flaviodlv/mini-nuxt-project" class="btn-link">Voir le code</a>
+                        <a href="#" class="btn-link">Voir le code</a>
+                        <a href="#" class="btn-link secondary">Demo</a>
                     </div>
                 </div>
 
@@ -39,8 +40,8 @@
                         Collection de jeux développés avec Pygame pour apprendre le développement de jeux 2D.
                     </p>
                     <div class="project-links">
-                        <a target="_blank" href="https://github.com/flaviodlv/pygame" class="btn-link">Voir le code</a>
-          
+                        <a href="#" class="btn-link">Voir le code</a>
+                        <a href="#" class="btn-link secondary">Demo</a>
                     </div>
                 </div>
 
@@ -56,10 +57,11 @@
                         </span>
                     </div>
                     <p class="project-description">
-                        Jeu PyGame 2D de mineur - Actuellement en cours de développement
+                        Jeu PyGame 2D de mineur - Explorez, minez et survivez dans un monde souterrain généré procéduralement.
                     </p>
                     <div class="project-links">
-                        <a target="_blank" href="https://github.com/flaviodlv/Miningame" class="btn-link">Voir le code</a>
+                        <a href="#" class="btn-link">Voir le code</a>
+                        <a href="#" class="btn-link secondary">Demo</a>
                     </div>
                 </div>
 
@@ -81,6 +83,25 @@
                         <a target="_blank" href="https://github.com/flaviodlv/portfolio" class="btn-link">Voir le code</a>
                     </div>
                 </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h2 class="project-title">PPE</h2>
+                        <span class="badge">Public</span>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-badge vue">
+                            <span class="tech-dot"></span>
+                            Vue
+                        </span>
+                    </div>
+                    <p class="project-description">
+                        Projet Professionnel Encadré réalisé dans le cadre de ma formation BTS SIO.
+                    </p>
+                    <div class="project-links">
+                        <a target="_blank" href="https://github.com/flaviodlv/ppe" class="btn-link">Voir le code</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -88,7 +109,7 @@
 
 <script>
 definePageMeta({
-    layout: 'default'
+    layouts: 'default'
 })
 </script>
 
@@ -119,7 +140,7 @@ definePageMeta({
 .page-subtitle {
     text-align: center;
     color: #8b949e;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 60px;
 }
 
@@ -135,7 +156,7 @@ definePageMeta({
     border-radius: 12px;
     padding: 24px;
     transition: all 0.3s ease;
-
+    
     &:hover {
         transform: translateY(-5px);
         border-color: #58a6ff;
@@ -151,7 +172,7 @@ definePageMeta({
 }
 
 .project-title {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: #58a6ff;
     margin: 0;
@@ -159,10 +180,10 @@ definePageMeta({
 
 .badge {
     padding: 4px 12px;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(88, 166, 255, 0.1);
     border: 1px solid #58a6ff;
     border-radius: 20px;
-    font-size: 1rem;
+    font-size: 0.75rem;
     color: #58a6ff;
     font-weight: 500;
 }
@@ -182,13 +203,13 @@ definePageMeta({
     border-radius: 16px;
     font-size: 0.85rem;
     color: #8b949e;
-
+    
     &.vue {
         .tech-dot {
             background: #42b883;
         }
     }
-
+    
     &.python {
         .tech-dot {
             background: #3776ab;
@@ -224,16 +245,16 @@ definePageMeta({
     text-align: center;
     font-weight: 500;
     transition: all 0.2s ease;
-
+    
     &:hover {
         background: #2ea043;
     }
-
+    
     &.secondary {
         background: transparent;
         border: 1px solid #30363d;
         color: #c9d1d9;
-
+        
         &:hover {
             border-color: #58a6ff;
             color: #58a6ff;
@@ -245,11 +266,11 @@ definePageMeta({
     .page-title {
         font-size: 2rem;
     }
-
+    
     .projects-grid {
         grid-template-columns: 1fr;
     }
-
+    
     .projects-page {
         padding: 60px 15px 30px;
     }
