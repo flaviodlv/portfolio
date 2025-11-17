@@ -20,8 +20,7 @@
                         Un projet minimaliste utilisant Nuxt.js pour explorer les fonctionnalités du framework.
                     </p>
                     <div class="project-links">
-                        <a href="#" class="btn-link">Voir le code</a>
-                        <a href="#" class="btn-link secondary">Demo</a>
+                        <a href="https://github.com/flaviodlv/mini-nuxt-project" target="_blank" class="btn-link">Voir le code</a>
                     </div>
                 </div>
 
@@ -40,8 +39,7 @@
                         Collection de jeux développés avec Pygame pour apprendre le développement de jeux 2D.
                     </p>
                     <div class="project-links">
-                        <a href="#" class="btn-link">Voir le code</a>
-                        <a href="#" class="btn-link secondary">Demo</a>
+                        <a href="https://github.com/flaviodlv/pygame" target="_blank" class="btn-link">Voir le code</a>
                     </div>
                 </div>
 
@@ -60,8 +58,8 @@
                         Jeu PyGame 2D de mineur - Explorez, minez et survivez dans un monde souterrain généré procéduralement.
                     </p>
                     <div class="project-links">
-                        <a href="#" class="btn-link">Voir le code</a>
-                        <a href="#" class="btn-link secondary">Demo</a>
+                        <a href="https://github.com/flaviodlv/Miningame" target="_blank" class="btn-link">Voir le code</a>
+                        
                     </div>
                 </div>
 
@@ -158,7 +156,6 @@ definePageMeta({
     transition: all 0.3s ease;
     
     &:hover {
-        transform: translateY(-5px);
         border-color: #58a6ff;
         box-shadow: 0 8px 30px rgba(88, 166, 255, 0.15);
     }
