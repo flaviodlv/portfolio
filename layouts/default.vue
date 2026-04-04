@@ -1,5 +1,7 @@
 <script setup>
+import { ref } from 'vue'
 defineOptions({ name: "DefaultLayout" });
+const menuOpen = ref(false)
 </script>
 
 <template>
@@ -14,30 +16,20 @@ defineOptions({ name: "DefaultLayout" });
         <li><NuxtLink to="/cv">CV</NuxtLink></li>
         <li><NuxtLink to="/veille">Veille</NuxtLink></li>
       </ul>
-      <button
-        class="nav-toggle"
-        aria-label="Menu"
-        @click="menuOpen = !menuOpen"
-      >
+      <button class="nav-toggle" aria-label="Menu" @click="menuOpen = !menuOpen">
         <span></span><span></span><span></span>
       </button>
     </nav>
+
     <div class="mobile-menu" :class="{ open: menuOpen }">
       <ul>
-        <li>
-          <NuxtLink to="/projets" @click="menuOpen = false">Projets</NuxtLink>
-        </li>
-        <li>
-          <NuxtLink to="/entreprise" @click="menuOpen = false"
-            >Entreprise</NuxtLink
-          >
-        </li>
+        <li><NuxtLink to="/projets" @click="menuOpen = false">Projets</NuxtLink></li>
+        <li><NuxtLink to="/entreprise" @click="menuOpen = false">Entreprise</NuxtLink></li>
         <li><NuxtLink to="/cv" @click="menuOpen = false">CV</NuxtLink></li>
-        <li>
-          <NuxtLink to="/veille" @click="menuOpen = false">Veille</NuxtLink>
-        </li>
+        <li><NuxtLink to="/veille" @click="menuOpen = false">Veille</NuxtLink></li>
       </ul>
     </div>
+
     <main class="content">
       <slot />
     </main>
@@ -47,16 +39,9 @@ defineOptions({ name: "DefaultLayout" });
 <style>
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap");
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-html,
-body {
+html, body {
   background: #ffffff;
   color: #111111;
   font-family: "DM Sans", sans-serif;
@@ -76,15 +61,8 @@ body {
   --nav-h: 64px;
 }
 
-.layout {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.content {
-  flex: 1;
-}
+.layout { display: flex; flex-direction: column; min-height: 100vh; }
+.content { flex: 1; }
 
 .navbar {
   position: sticky;
@@ -100,11 +78,7 @@ body {
   border-bottom: 1px solid var(--border);
 }
 
-.navbar-brand {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-}
+.navbar-brand { text-decoration: none; display: flex; align-items: center; }
 
 .brand-initials {
   font-family: "DM Serif Display", serif;
@@ -113,16 +87,9 @@ body {
   letter-spacing: 0.02em;
   transition: color 0.1s;
 }
+.brand-initials:hover { color: var(--accent); }
 
-.brand-initials:hover {
-  color: var(--accent);
-}
-
-.navbar-links {
-  display: flex;
-  gap: 2.4rem;
-  list-style: none;
-}
+.navbar-links { display: flex; gap: 2.4rem; list-style: none; }
 
 .navbar-links li a {
   color: var(--muted);
@@ -148,14 +115,10 @@ body {
 }
 
 .navbar-links li a:hover,
-.navbar-links li a.router-link-active {
-  color: var(--ink);
-}
+.navbar-links li a.router-link-active { color: var(--ink); }
 
 .navbar-links li a.router-link-active::after,
-.navbar-links li a:hover::after {
-  width: 100%;
-}
+.navbar-links li a:hover::after { width: 100%; }
 
 .nav-toggle {
   display: none;
@@ -175,7 +138,6 @@ body {
   transition: all 0.3s;
 }
 
-/* Mobile menu */
 .mobile-menu {
   display: none;
   position: fixed;
@@ -187,20 +149,12 @@ body {
   z-index: 99;
   transform: translateY(-100%);
   opacity: 0;
-  transition:
-    transform 0.3s ease,
-    opacity 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.mobile-menu.open {
-  transform: translateY(0);
-  opacity: 1;
-}
+.mobile-menu.open { transform: translateY(0); opacity: 1; }
 
-.mobile-menu ul {
-  list-style: none;
-  padding: 16px 24px 24px;
-}
+.mobile-menu ul { list-style: none; padding: 16px 24px 24px; }
 
 .mobile-menu ul li a {
   display: block;
@@ -209,5 +163,21 @@ body {
   text-decoration: none;
   font-size: 1.1rem;
   border-bottom: 1px solid var(--border);
+}
+
+/* ── Mobile ── */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 24px;
+  }
+  .navbar-links {
+    display: none;
+  }
+  .nav-toggle {
+    display: flex;
+  }
+  .mobile-menu {
+    display: block;
+  }
 }
 </style>
