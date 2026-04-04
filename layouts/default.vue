@@ -62,7 +62,6 @@ body {
   font-family: "DM Sans", sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
-  overflow: hidden;
 }
 
 :root {
