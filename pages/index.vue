@@ -4,24 +4,13 @@
       <div class="hero-section">
         <h1 class="hero-title">
           <span class="name">Flavio DE OLIVEIRA</span>
+          <span class="phone">06 09 01 56 07</span>
+          <span class="mail">dolv.flavio@gmail.com</span>
         </h1>
-        <p class="hero-subtitle">Étudiant BTS SIO • Développeur Nuxt.js en Alternance</p>
+        <p class="hero-subtitle">Étudiant BTS SIO • Développeur Informatique en Alternance</p>
       </div>
 
       <section class="about-section">
-        <div class="about-card">
-          <div class="card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
-          </div>
-          <h2 class="section-title">À propos</h2>
-          <p>
-            Bonjour et bienvenue sur mon Portfolio, je suis un étudiant en deuxième année de BTS SIO, en alternance.
-          </p>
-        </div>
-
         <div class="about-card">
           <div class="card-icon">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -61,28 +50,22 @@
             </svg>
             Voir mes projets
           </NuxtLink>
-          <NuxtLink to="/contact" class="btn-secondary">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-            </svg>
-            Me contacter
-          </NuxtLink>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-definePageMeta({
-  layout: "default",
+<script setup>
+defineOptions({
+  name: "HomePage",
 });
 </script>
 
 <style lang="scss" scoped>
 .home-page {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+  background: white;
   padding: 80px 20px 40px;
 }
 
@@ -105,11 +88,10 @@ definePageMeta({
 }
 
 
-
 .name {
   font-size: 4rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #58a6ff 0%, #79c0ff 100%);
+  background: black;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -121,6 +103,7 @@ definePageMeta({
   font-weight: 400;
 }
 
+
 .about-section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -129,16 +112,12 @@ definePageMeta({
 }
 
 .about-card {
-  background: #161b22;
-  border: 1px solid #30363d;
+  background: #ffffff;
+  border: 1px solid #000000;
   border-radius: 12px;
   padding: 30px;
   transition: all 0.3s ease;
-  
-  &:hover {
-    border-color: #58a6ff;
-    box-shadow: 0 8px 30px rgba(88, 166, 255, 0.15);
-  }
+
 }
 
 .card-icon {
@@ -156,12 +135,12 @@ definePageMeta({
 .section-title {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #c9d1d9;
+  color: #000000;
   margin-bottom: 15px;
 }
 
 .about-card p {
-  color: #8b949e;
+  color: #000000;
   line-height: 1.7;
   font-size: 1rem;
   font-style: italic;
@@ -170,15 +149,15 @@ definePageMeta({
 .cta-section {
   text-align: center;
   padding: 60px 20px;
-  background: #161b22;
-  border: 1px solid #30363d;
+  background: #ffffff;
+  border: 1px solid #000000;
   border-radius: 12px;
   margin-top: 40px;
 }
 
 .cta-text {
   font-size: 1.2rem;
-  color: #c9d1d9;
+  color: #000000;
   margin-bottom: 30px;
   font-weight: 500;
 }
@@ -203,11 +182,7 @@ definePageMeta({
   transition: all 0.3s ease;
   
   svg {
-    transition: transform 0.3s ease;
-  }
-  
-  &:hover svg {
-    transform: translateX(3px);
+    transition: transform 0.4s ease;
   }
 }
 
@@ -217,19 +192,16 @@ definePageMeta({
   
   &:hover {
     background: #2ea043;
-    box-shadow: 0 4px 20px rgba(35, 134, 54, 0.4);
+    box-shadow: 0 0px 10px rgba(17, 66, 27, 0.4);
   }
 }
 
 .btn-secondary {
-  background: transparent;
-  border: 1px solid #30363d;
-  color: #c9d1d9;
-  
+  background: #238636;
+  color: #fff;
   &:hover {
-    border-color: #58a6ff;
-    color: #58a6ff;
-    box-shadow: 0 4px 20px rgba(88, 166, 255, 0.2);
+    background: #2ea043;
+    box-shadow: 0 0px 10px rgba(17, 66, 27, 0.4);
   }
 }
 
@@ -260,6 +232,10 @@ definePageMeta({
   .btn-secondary {
     width: 100%;
     justify-content: center;
+  }
+
+  .mail {
+    display: inline;
   }
 }
 </style>

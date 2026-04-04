@@ -1,3 +1,7 @@
+<script setup>
+defineOptions({ name: 'DefaultLayout' })
+</script>
+
 <template>
   <div class="layout">
     <nav class="navbar">
@@ -15,10 +19,6 @@
     <main class="content">
       <slot />
     </main>
-
-    <footer class="footer">
-      <p>© {{ new Date().getFullYear() }} - Flavio De Oliveira</p>
-    </footer>
   </div>
 </template>
 
@@ -48,12 +48,12 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+  background: white;
   padding: 0.6rem;
 }
 
 .navbar-brand a {
-  color: #fff;
+  color: #000000;
   font-size: 1.6rem;
   text-decoration: none;
   margin-left: 5rem;
@@ -71,7 +71,7 @@ html, body {
 }
 
 .navbar-links li a {
-  color: #fff;
+  color: #000000;
   text-decoration: none;
   font-size: 1.1rem;
   transition: color 0.3s;
@@ -79,14 +79,5 @@ html, body {
 
 .navbar-links li a:hover {
   color: #58a6ff;
-}
-
-.footer {
-  width: 100%;
-  text-align: center;
-  padding: 0.5rem 0;
-  background: #0d1117;
-  color: #aaa;
-  border-top: 1px solid #222;
 }
 </style>

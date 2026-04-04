@@ -3,101 +3,39 @@
         <div class="container">
             <h1 class="page-title">Mes Projets</h1>
             <p class="page-subtitle">Découvrez mes réalisations et expérimentations</p>
-
-            <div class="projects-grid">
-                <div class="project-card">
+            <h1>Projets scolaire</h1>
+             <div class="project-card">
                     <div class="project-header">
-                        <h2 class="project-title">mini-nuxt-project</h2>
-                        <span class="badge">Public</span>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-badge vue">
-                            <span class="tech-dot"></span>
-                            Vue
-                        </span>
+                        <h2 class="project-title">PPE 1 : Réalisation d’un site Web de e-commerce</h2>
                     </div>
                     <p class="project-description">
-                        Un projet minimaliste utilisant Nuxt.js pour explorer les fonctionnalités du framework.
+                        Projet Professionnel Encadré réalisé en première année dans le cadre de ma formation.
                     </p>
                     <div class="project-links">
-                        <a href="https://github.com/flaviodlv/mini-nuxt-project" target="_blank" class="btn-link">Voir le code</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h2 class="project-title">pygame</h2>
-                        <span class="badge">Public</span>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-badge python">
-                            <span class="tech-dot"></span>
-                            Python
-                        </span>
-                    </div>
-                    <p class="project-description">
-                        Collection de jeux développés avec Pygame pour apprendre le développement de jeux 2D.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://github.com/flaviodlv/pygame" target="_blank" class="btn-link">Voir le code</a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h2 class="project-title">Miningame</h2>
-                        <span class="badge">Public</span>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-badge python">
-                            <span class="tech-dot"></span>
-                            Python
-                        </span>
-                    </div>
-                    <p class="project-description">
-                        Jeu PyGame 2D de mineur - Explorez, minez et survivez dans un monde souterrain généré procéduralement.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://github.com/flaviodlv/Miningame" target="_blank" class="btn-link">Voir le code</a>
+                        <a target="_blank" href="https://drive.google.com/drive/folders/1H8juEu5YwMbv43fnoOrz8SF_Hb0wnFGV" class="btn-link">Voir la documentation</a>
                         
                     </div>
                 </div>
-
                 <div class="project-card">
                     <div class="project-header">
-                        <h2 class="project-title">portfolio</h2>
-                        <span class="badge">Public</span>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-badge vue">
-                            <span class="tech-dot"></span>
-                            Vue
-                        </span>
+                        <h2 class="project-title">PPE 2 : Application Windows permettant de créer des interventions sur des produits</h2>
                     </div>
                     <p class="project-description">
-                        Ce portfolio que vous consultez actuellement, développé avec Nuxt.js et Vue 3.
+                        Projet Professionnel Encadré réalisé en deuxième année dans le cadre de ma formation.
                     </p>
                     <div class="project-links">
-                        <a target="_blank" href="https://github.com/flaviodlv/portfolio" class="btn-link">Voir le code</a>
+                        <a target="_blank" href="https://drive.google.com/drive/folders/1qDKq8KDi-vJNLCOoh4nnSDBB5a77C_tP" class="btn-link">Voir la documentation</a>
                     </div>
                 </div>
-
+                <hr>
+                <h1>Projets extra-scolaire</h1>
+            <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-header">
-                        <h2 class="project-title">PPE</h2>
-                        <span class="badge">Public</span>
+                        <h2 class="project-title">Collection de projets réalisés en extra-scolaire</h2>
                     </div>
-                    <div class="project-tech">
-                        <span class="tech-badge vue">
-                            <span class="tech-dot"></span>
-                            Vue
-                        </span>
-                    </div>
-                    <p class="project-description">
-                        Projet Professionnel Encadré réalisé dans le cadre de ma formation BTS SIO.
-                    </p>
                     <div class="project-links">
-                        <a target="_blank" href="https://github.com/flaviodlv/ppe" class="btn-link">Voir le code</a>
+                        <a href="https://github.com/flaviodlv/" target="_blank" class="btn-link">Voir les projets</a>
                     </div>
                 </div>
             </div>
@@ -106,6 +44,7 @@
 </template>
 
 <script>
+// eslint-disable-next-line no-undef
 definePageMeta({
     layouts: 'default'
 })
@@ -114,7 +53,7 @@ definePageMeta({
 <style lang="scss" scoped>
 .projects-page {
     min-height: 100vh;
-    background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+    background: white;
     padding: 80px 20px 40px;
 }
 
@@ -129,7 +68,7 @@ definePageMeta({
     color: #fff;
     text-align: center;
     margin-bottom: 10px;
-    background: linear-gradient(135deg, #58a6ff 0%, #79c0ff 100%);
+    background: black;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -149,16 +88,11 @@ definePageMeta({
 }
 
 .project-card {
-    background: #161b22;
-    border: 1px solid #30363d;
+    background: #ffffff;
+    border: 1px solid #000000;
     border-radius: 12px;
     padding: 24px;
     transition: all 0.3s ease;
-    
-    &:hover {
-        border-color: #58a6ff;
-        box-shadow: 0 8px 30px rgba(88, 166, 255, 0.15);
-    }
 }
 
 .project-header {
@@ -171,57 +105,13 @@ definePageMeta({
 .project-title {
     font-size: 1.5rem;
     font-weight: 600;
-    color: #58a6ff;
+    color: #000000;
     margin: 0;
 }
 
-.badge {
-    padding: 4px 12px;
-    background: rgba(88, 166, 255, 0.1);
-    border: 1px solid #58a6ff;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    color: #58a6ff;
-    font-weight: 500;
-}
-
-.project-tech {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 16px;
-}
-
-.tech-badge {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 4px 12px;
-    background: rgba(139, 148, 158, 0.1);
-    border-radius: 16px;
-    font-size: 0.85rem;
-    color: #8b949e;
-    
-    &.vue {
-        .tech-dot {
-            background: #42b883;
-        }
-    }
-    
-    &.python {
-        .tech-dot {
-            background: #3776ab;
-        }
-    }
-}
-
-.tech-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-}
 
 .project-description {
-    color: #c9d1d9;
+    color: #000000;
     line-height: 1.6;
     margin-bottom: 20px;
     min-height: 60px;
@@ -245,17 +135,6 @@ definePageMeta({
     
     &:hover {
         background: #2ea043;
-    }
-    
-    &.secondary {
-        background: transparent;
-        border: 1px solid #30363d;
-        color: #c9d1d9;
-        
-        &:hover {
-            border-color: #58a6ff;
-            color: #58a6ff;
-        }
     }
 }
 
