@@ -6,7 +6,11 @@ defineOptions({ name: 'DefaultLayout' })
   <div class="layout">
     <nav class="navbar">
       <div class="navbar-brand">
-        <NuxtLink to="/">Flavio De Oliveira</NuxtLink>
+        <NuxtLink to="/" aria-label="Home">
+          <svg viewBox="0 0 24 24" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 10.5L12 3l9 7.5V21a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V10.5Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </NuxtLink>
       </div>
       <ul class="navbar-links">
         <li><NuxtLink to="/projets">Projets</NuxtLink></li>
