@@ -1,241 +1,227 @@
 <template>
   <div class="home-page">
-    <div class="container">
-      <div class="hero-section">
-        <h1 class="hero-title">
-          <span class="name">Flavio DE OLIVEIRA</span>
-          <span class="phone">06 09 01 56 07</span>
-          <span class="mail">dolv.flavio@gmail.com</span>
-        </h1>
-        <p class="hero-subtitle">Étudiant BTS SIO • Développeur Informatique en Alternance</p>
-      </div>
-
-      <section class="about-section">
-        <div class="about-card">
-          <div class="card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="16 18 22 12 16 6"></polyline>
-              <polyline points="8 6 2 12 8 18"></polyline>
-            </svg>
-          </div>
-          <h2 class="section-title">Ma passion</h2>
-          <p>
-            J'aime particulièrement travailler sur des interfaces modernes, propres et ergonomiques. J'accorde beaucoup 
-            d'importance à la qualité du code, à l'optimisation et à l'expérience utilisateur.
-          </p>
-        </div>
-
-        <div class="about-card">
-          <div class="card-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-              <polyline points="22 4 12 14.01 9 11.01"></polyline>
-            </svg>
-          </div>
-          <h2 class="section-title">Mes projets</h2>
-          <p>
-            Sur ce portfolio, vous trouverez mes différents projets, qu'ils soient réalisés en cours, en entreprise ou durant 
-            mon temps libre. Mon objectif est de continuer à progresser, apprendre de nouvelles technologies et construire 
-            des solutions utiles.
-          </p>
-        </div>
-      </section>
-
-      <div class="cta-section">
-        <p class="cta-text">Naviguez à travers les différentes sections pour découvrir mon travail et mes compétences.</p>
-        <div class="cta-buttons">
-          <NuxtLink to="/projets" class="btn-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-            </svg>
-            Voir mes projets
-          </NuxtLink>
+    <section class="hero">
+      <div class="hero-inner">
+        <p class="hero-eyebrow">Accueil</p>
+        <h1 class="hero-name">Flavio DE OLIVEIRA</h1>
+        <p class="hero-role">
+          Étudiant BTS SIO &bull; Développeur Informatique en alternance
+        </p>
+        <div class="hero-contact">
+          <p>06 09 01 56 07</p>
+          <span class="dot"></span>
+          <a href="mailto:dolv.flavio@gmail.com">dolv.flavio@gmail.com</a>
         </div>
       </div>
-    </div>
+      <div class="hero-line"></div>
+    </section>
+
+    <section class="about">
+      <div class="about-grid">
+        <div class="about-block">
+          <h2>Ma passion</h2>
+          <p>
+            J'aime travailler sur des interfaces modernes, propres et
+            ergonomiques. J'accorde beaucoup d'importance à la qualité du code,
+            à l'optimisation et à l'expérience utilisateur.
+          </p>
+        </div>
+        <div class="about-block">
+          <h2>Mes projets</h2>
+          <p>
+            Sur ce portfolio, vous trouverez mes différents projets — réalisés
+            en cours, en entreprise ou durant mon temps libre. Mon objectif :
+            progresser en continu, apprendre de nouvelles technologies et
+            construire des solutions utiles.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <NuxtLink to="/projets" class="cta-btn">
+        Voir mes projets
+        <svg
+          viewBox="0 0 20 20"
+          width="16"
+          height="16"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+        >
+          <path
+            d="M4 10h12M11 5l5 5-5 5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </NuxtLink>
+    </section>
   </div>
 </template>
 
 <script setup>
-defineOptions({
-  name: "HomePage",
-});
+defineOptions({ name: "HomePage" });
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .home-page {
-  min-height: 100vh;
-  background: white;
-  padding: 80px 20px 40px;
+  padding-top: 0;
 }
 
-.container {
-  max-width: 1200px;
+.hero {
+  padding: 96px 72px 0;
+  max-width: 960px;
   margin: 0 auto;
 }
 
-.hero-section {
-  text-align: center;
-  margin-bottom: 80px;
-  padding: 60px 20px;
+.hero-eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
+  margin-bottom: 28px;
 }
 
-.hero-title {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.hero-name {
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 300;
+  line-height: 1.05;
+  color: var(--ink);
+  margin-bottom: 28px;
+  letter-spacing: -0.02em;
+}
+
+.hero-role {
+  font-size: 1rem;
+  color: var(--muted);
+  font-weight: 400;
   margin-bottom: 20px;
 }
 
-
-.name {
-  font-size: 4rem;
-  font-weight: 700;
-  background: black;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.hero-subtitle {
-  font-size: 1.3rem;
-  color: #8b949e;
-  font-weight: 400;
-}
-
-
-.about-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  margin-bottom: 60px;
-}
-
-.about-card {
-  background: #ffffff;
-  border: 1px solid #000000;
-  border-radius: 12px;
-  padding: 30px;
-  transition: all 0.3s ease;
-
-}
-
-.card-icon {
-  width: 50px;
-  height: 50px;
-  background: rgba(88, 166, 255, 0.1);
-  border-radius: 10px;
+.hero-contact {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  color: #58a6ff;
-}
-
-.section-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #000000;
-  margin-bottom: 15px;
-}
-
-.about-card p {
-  color: #000000;
-  line-height: 1.7;
-  font-size: 1rem;
-  font-style: italic;
-}
-
-.cta-section {
-  text-align: center;
-  padding: 60px 20px;
-  background: #ffffff;
-  border: 1px solid #000000;
-  border-radius: 12px;
-  margin-top: 40px;
-}
-
-.cta-text {
-  font-size: 1.2rem;
-  color: #000000;
-  margin-bottom: 30px;
-  font-weight: 500;
-}
-
-.cta-buttons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
+  gap: 14px;
   flex-wrap: wrap;
 }
 
-.btn-primary,
-.btn-secondary {
+.hero-contact a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+.hero-contact a:hover {
+  color: var(--ink);
+}
+
+.hero-contact p {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #cccccc;
+  display: inline-block;
+}
+
+.hero-line {
+  height: 1px;
+  background: var(--border);
+  margin-top: 72px;
+}
+
+.about {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 72px 72px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.about-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-block h2 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+.about-block p {
+  font-size: 0.925rem;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.cta {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 72px 96px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  border-top: 1px solid var(--border);
+}
+
+.cta-label {
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.cta-btn {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 14px 28px;
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 1rem;
+  padding: 12px 28px;
+  background: var(--ink);
+  color: #ffffff;
   text-decoration: none;
-  transition: all 0.3s ease;
-  
-  svg {
-    transition: transform 0.4s ease;
-  }
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  transition: background 0.2s;
 }
-
-.btn-primary {
-  background: #238636;
-  color: #fff;
-  
-  &:hover {
-    background: #2ea043;
-    box-shadow: 0 0px 10px rgba(17, 66, 27, 0.4);
-  }
-}
-
-.btn-secondary {
-  background: #238636;
-  color: #fff;
-  &:hover {
-    background: #2ea043;
-    box-shadow: 0 0px 10px rgba(17, 66, 27, 0.4);
-  }
+.cta-btn:hover {
+  background: #333333;
 }
 
 @media (max-width: 768px) {
-  .hero-section {
-    padding: 40px 10px;
-    margin-bottom: 50px;
+  .hero {
+    padding: 60px 24px 0;
   }
-  
-  .name {
-    font-size: 2.5rem;
+  .hero-name {
+    font-size: 2.6rem;
   }
-  
-  .hero-subtitle {
-    font-size: 1.1rem;
+  .about {
+    padding: 48px 24px;
   }
-  
-  .about-section {
+  .about-grid {
     grid-template-columns: 1fr;
+    gap: 36px;
   }
-  
-  .cta-buttons {
+  .cta {
+    padding: 36px 24px 60px;
     flex-direction: column;
-    align-items: stretch;
-  }
-  
-  .btn-primary,
-  .btn-secondary {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .mail {
-    display: inline;
+    align-items: flex-start;
+    gap: 20px;
   }
 }
 </style>

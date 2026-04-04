@@ -1,113 +1,166 @@
 <template>
-    <div class="cv-page">
-        <div class="container">
-            <h1 class="page-title">CV</h1>
-            <p class="page-subtitle">Découvrez mon parcours et mes compétences</p>
-             <div class="cv-download">
-                    <a href="\Flavio-De-Oliveira-FlowCV-Resume-20251115.pdf" target="_blank">
-                        Lien vers le CV complet
-                    </a>
-                </div>
+  <div class="cv-page">
+    <div class="page-inner">
+      <header class="page-header">
+        <p class="eyebrow">CV</p>
+        <h1>Curriculum Vitae</h1>
+        <p class="subtitle">Mon parcours et mes compétences</p>
+      </header>
+
+      <div class="divider"></div>
+
+      <section class="cv-body">
+        <div class="cv-info">
+          <p>
+            Le CV complet est disponible en cliquant sur le lien ci-dessous. Il
+            regroupe mon parcours scolaire, mes expériences en alternance et mes
+            compétences techniques.
+          </p>
+          <a href="/CV.pdf" target="_blank" class="cv-download-btn">
+            Voir le CV complet
+          </a>
         </div>
+
+        <div class="cv-highlights">
+          <div class="highlight-item">
+            <span class="h-label">Formation</span>
+            <span class="h-value">BTS SIO — option SLAM</span>
+          </div>
+          <div class="highlight-item">
+            <span class="h-label">Statut</span>
+            <span class="h-value">Alternant — Développeur</span>
+          </div>
+          <div class="highlight-item">
+            <span class="h-label">Entreprise</span>
+            <span class="h-value">Hachette Livre</span>
+          </div>
+        </div>
+      </section>
     </div>
+  </div>
 </template>
 
 <script>
-// eslint-disable-next-line no-undef
-definePageMeta({
-    layout: 'default'
-})
+definePageMeta({ layout: "default" });
 </script>
 
-<style lang="scss" scoped>
-
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
+<style scoped>
+.cv-page {
+  min-height: 100vh;
+  padding-bottom: 96px;
 }
 
-.page-title {
-    font-size: 3rem;
-    font-weight: 700;
-    color: #fff;
-    text-align: center;
-    margin-bottom: 10px;
-    background: rgb(0, 0, 0);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+.page-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 72px;
 }
 
-.page-subtitle {
-    text-align: center;
-    color: #8b949e;
-    font-size: 1.1rem;
-    margin-bottom: 60px;
+.page-header {
+  padding-top: 72px;
+  padding-bottom: 48px;
 }
 
-.cv-download {
-    padding: 30px 40px;
-    background: rgba(0, 0, 0, 0.1);
-    text-align: center;
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
+  margin-bottom: 20px;
 }
 
-.cv-download a {
-    color: #238636;
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    
-    &:hover {
-        color: #20c03d;
-    }
+.page-header h1 {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 300;
+  color: var(--ink);
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.divider {
+  height: 1px;
+  background: var(--border);
+}
+
+.cv-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  padding: 64px 0;
+}
+
+.cv-info p {
+  font-size: 0.925rem;
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.cv-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 28px;
+  background: var(--ink);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: background 0.2s;
+}
+.cv-download-btn:hover {
+  background: #555555;
+}
+
+.cv-highlights {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border);
+}
+
+.highlight-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.h-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.h-value {
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+
+.h-value a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border);
+  transition: opacity 0.2s;
+}
+.h-value a:hover {
+  opacity: 0.5;
 }
 
 @media (max-width: 768px) {
-    .page-title {
-        font-size: 2rem;
-    }
-    
-    .cv-header {
-        padding: 30px 20px;
-    }
-    
-    .profile-section {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .profile-icon {
-        width: 80px;
-        height: 80px;
-        
-        svg {
-            width: 48px;
-            height: 48px;
-        }
-    }
-    
-    .profile-info h2 {
-        font-size: 1.8rem;
-    }
-    
-    .cv-content {
-        padding: 30px 20px;
-    }
-    
-    .info-grid,
-    .highlights-section {
-        grid-template-columns: 1fr;
-    }
-    
-    .cv-download {
-        padding: 25px 20px;
-    }
-    
-    .btn-download {
-        width: 100%;
-        justify-content: center;
-    }
+  .page-inner {
+    padding: 0 24px;
+  }
+  .cv-body {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 }
 </style>
