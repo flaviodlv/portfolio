@@ -11,7 +11,7 @@
 
       <section class="project-section">
         <h2 class="section-label">
-          <span class="label-num">01</span> Projets scolaires
+          <span class="label-num">-</span> Projets scolaires
         </h2>
         <div class="project-list">
           <article class="project-card">
@@ -88,7 +88,7 @@
 
       <section class="project-section">
         <h2 class="section-label">
-          <span class="label-num">02</span> Projets personnels
+          <span class="label-num">-</span> Projets personnels
         </h2>
         <div class="project-list">
           <article class="project-card wide">

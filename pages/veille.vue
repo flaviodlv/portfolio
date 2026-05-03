@@ -11,13 +11,12 @@
 
       <section class="veille-body">
         <div class="veille-intro">
-          <div class="badge-coming">En cours d'amélioration</div>
+          <div class="badge-coming">DLSS</div>
           <p>
-            Cette section présentera ma veille technologique — les sujets que je
-            suis, les sources que je consulte et mes synthèses sur les
-            évolutions du secteur.
+            Cette section présente ma veille technologique — les sujets que je
+            suis, et les sources.
           </p>
-          <a href="/veille.pdf" target="_blank" class="veille-link">
+          <a href="https://gamma.app/docs/Untitled-rxsyzp9rvcto7us?mode=doc" target="_blank" class="veille-link">
             Accéder à la veille
           </a>
         </div>

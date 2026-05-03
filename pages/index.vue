@@ -37,26 +37,6 @@
         </div>
       </div>
     </section>
-
-    <section class="cta">
-      <NuxtLink to="/projets" class="cta-btn">
-        Voir mes projets
-        <svg
-          viewBox="0 0 20 20"
-          width="16"
-          height="16"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="1.8"
-        >
-          <path
-            d="M4 10h12M11 5l5 5-5 5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </NuxtLink>
-    </section>
   </div>
 </template>
 

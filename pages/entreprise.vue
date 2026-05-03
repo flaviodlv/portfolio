@@ -11,18 +11,21 @@
 
       <section class="entreprise-body">
         <div class="entreprise-info">
-          <div class="badge-coming">En cours de rédaction</div>
           <p>
-            Cette section présentera mon expérience d'alternance chez <strong>Hachette</strong>,
-            mes missions, les technologies utilisées et les projets réalisés au sein de l'entreprise.
+            Cette section présente mon expérience d'alternance chez <strong>Hachette</strong>,
+            mes missions, les technologies utilisées au sein de l'entreprise.
           </p>
-          <p>Revenez bientôt pour découvrir le détail de mon expérience.</p>
+          <a href="https://gamma.app/docs/Hachette-Livre-9lzcj7oyhqjyra3?mode=doc" target="_blank"
+            rel="noopener noreferrer" class="entreprise-link">
+            Voir le diaporama
+          </a>
         </div>
 
         <div class="company-card">
-          <span class="company-label">Entreprise d'accueil</span>
           <div class="company-header">
-            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Hachette_logo.svg/3840px-Hachette_logo.svg.png" alt="Hachette logo" class="company-logo" />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Hachette_logo.svg/3840px-Hachette_logo.svg.png"
+              alt="Hachette logo" class="company-logo" />
           </div>
           <span class="company-sector">Édition &amp; Médias</span>
         </div>
@@ -36,11 +39,21 @@ definePageMeta({ layout: 'default' })
 </script>
 
 <style scoped>
-.entreprise-page { min-height: 100vh; padding-bottom: 96px; }
+.entreprise-page {
+  min-height: 100vh;
+  padding-bottom: 96px;
+}
 
-.page-inner { max-width: 960px; margin: 0 auto; padding: 0 72px; }
+.page-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 72px;
+}
 
-.page-header { padding-top: 72px; padding-bottom: 48px; }
+.page-header {
+  padding-top: 72px;
+  padding-bottom: 48px;
+}
 
 .eyebrow {
   font-size: 0.75rem;
@@ -59,9 +72,15 @@ definePageMeta({ layout: 'default' })
   letter-spacing: -0.02em;
 }
 
-.subtitle { color: var(--muted); font-size: 0.95rem; }
+.subtitle {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
 
-.divider { height: 1px; background: var(--border); }
+.divider {
+  height: 1px;
+  background: var(--border);
+}
 
 .entreprise-body {
   display: grid;
@@ -78,7 +97,7 @@ definePageMeta({ layout: 'default' })
   text-transform: uppercase;
   font-weight: 500;
   color: var(--muted);
-  background: rgba(0,0,0,0.06);
+  background: rgba(0, 0, 0, 0.06);
   padding: 4px 10px;
   border-radius: 2px;
   margin-bottom: 24px;
@@ -91,7 +110,10 @@ definePageMeta({ layout: 'default' })
   margin-bottom: 12px;
 }
 
-.entreprise-info strong { color: var(--ink); font-weight: 500; }
+.entreprise-info strong {
+  color: var(--ink);
+  font-weight: 500;
+}
 
 .company-card {
   border: 1px solid var(--border);
@@ -130,10 +152,35 @@ definePageMeta({ layout: 'default' })
   object-fit: contain;
 }
 
-.company-sector { font-size: 0.85rem; color: var(--muted); }
+.company-sector {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.entreprise-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 28px;
+  background: var(--ink);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: background 0.2s;
+}
+
+.entreprise-link:hover {
+  background: #555555;
+}
 
 @media (max-width: 768px) {
-  .page-inner { padding: 0 24px; }
-  .entreprise-body { grid-template-columns: 1fr; gap: 40px; }
+  .page-inner {
+    padding: 0 24px;
+  }
+
+  .entreprise-body {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 }
 </style>
