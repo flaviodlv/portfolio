@@ -16,8 +16,23 @@
             Cette section présente ma veille technologique — les sujets que je
             suis, et les sources.
           </p>
-          <a href="https://gamma.app/docs/Untitled-rxsyzp9rvcto7us?mode=doc" target="_blank" class="veille-link">
+
+          <!-- Bouton Gamma -->
+          <a 
+            href="https://gamma.app/docs/Untitled-rxsyzp9rvcto7us?mode=doc" 
+            target="_blank" 
+            class="veille-link"
+          >
             Accéder à la veille
+          </a>
+
+          <!-- Bouton téléchargement -->
+          <a 
+            href="/Veille.pdf" 
+            download 
+            class="veille-link secondary"
+          >
+            Télécharger le PDF
           </a>
         </div>
 
@@ -120,9 +135,16 @@ definePageMeta({ layout: "default" });
   text-decoration: none;
   font-size: 0.875rem;
   transition: background 0.2s;
+  margin-top: 10px;
+  margin-right: 10px;
 }
+
 .veille-link:hover {
   background: #555555;
+}
+
+.veille-link.secondary {
+  background: #888;
 }
 
 .topics-label {
@@ -159,10 +181,24 @@ definePageMeta({ layout: "default" });
   flex-shrink: 0;
 }
 
+/* PDF viewer */
+.pdf-viewer {
+  margin-top: 32px;
+  border: 1px solid var(--border);
+}
+
+.pdf-fallback {
+  font-size: 0.8rem;
+  color: var(--muted);
+  padding: 10px;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .page-inner {
     padding: 0 24px;
   }
+
   .veille-body {
     grid-template-columns: 1fr;
     gap: 40px;

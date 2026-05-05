@@ -19,6 +19,13 @@
             rel="noopener noreferrer" class="entreprise-link">
             Voir le diaporama
           </a>
+          <a 
+            href="/Diapo.pdf" 
+            download 
+            class="entreprise-link secondary"
+          >
+            Télécharger le PDF
+          </a>
         </div>
 
         <div class="company-card">
@@ -167,10 +174,16 @@ definePageMeta({ layout: 'default' })
   text-decoration: none;
   font-size: 0.875rem;
   transition: background 0.2s;
+  margin-top: 10px;
+  margin-right: 10px;
 }
 
 .entreprise-link:hover {
   background: #555555;
+}
+
+.entreprise-link.secondary {
+  background: #888;
 }
 
 @media (max-width: 768px) {
