@@ -37,6 +37,11 @@
         </div>
       </div>
     </section>
+
+    <section class="pdf-section">
+      <a href="/FICHE_SYNTHESE.pdf" target="_blank" class="veille-link">Accéder à la fiche synthèse</a>
+    </section>
+
   </div>
 </template>
 
@@ -93,6 +98,7 @@ defineOptions({ name: "HomePage" });
   font-size: 1rem;
   transition: color 0.2s;
 }
+
 .hero-contact a:hover {
   color: var(--ink);
 }
@@ -149,6 +155,12 @@ defineOptions({ name: "HomePage" });
   line-height: 1.8;
 }
 
+.pdf-section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 72px 72px;
+}
+
 .cta {
   max-width: 960px;
   margin: 0 auto;
@@ -179,6 +191,7 @@ defineOptions({ name: "HomePage" });
   letter-spacing: 0.02em;
   transition: background 0.2s;
 }
+
 .cta-btn:hover {
   background: #333333;
 }
@@ -187,21 +200,47 @@ defineOptions({ name: "HomePage" });
   .hero {
     padding: 60px 24px 0;
   }
+
   .hero-name {
     font-size: 2.6rem;
   }
+
   .about {
     padding: 48px 24px;
   }
+
   .about-grid {
     grid-template-columns: 1fr;
     gap: 36px;
   }
+
+  .pdf-section {
+    padding: 48px 24px;
+  }
+
   .cta {
     padding: 36px 24px 60px;
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
   }
+}
+
+.veille-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 28px;
+  background: var(--ink);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: background 0.2s;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.veille-link:hover {
+  background: #555555;
 }
 </style>
